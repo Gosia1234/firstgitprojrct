@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     ImageView iv;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade);
                 iv.startAnimation(animation);
+                Toast.makeText(MainActivity.this,"text",Toast.LENGTH_SHORT).show();
             }
         });
     }
